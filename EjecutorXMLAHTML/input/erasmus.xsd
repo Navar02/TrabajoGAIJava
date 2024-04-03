@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:eras="http://www.erasmusG4-6.org"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+    targetNamespace="http://www.erasmusG4-6.org"
+    attributeFormDefault="qualified" vc:minVersion="1.1">
+    
+    <!-- Compendio de alumnos Erasmus -->
+    <xs:element name="Compendium">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Alumno" type="eras:CurriculumAlumni" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Definición del elemento Curriculum para los alumnos -->
+    <xs:complexType name="CurriculumAlumni">
+        <xs:sequence>
+            <xs:element name="PersonalInformation" type="eras:PersonalInformationType" maxOccurs="1"/>
+            <xs:element name="OriginUniversity" type="eras:EducationTypeOrigin" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ErasmusDestination" type="eras:EducationTypeDestination" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Experience" type="eras:ExperienceType" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <!-- aserción para comprobar que origen no sea igual al destino -->
+        <xs:assert test="OriginUniversity/Institution != ErasmusDestination/Institution"/>
+    </xs:complexType>
+    
+    <xs:simpleType name="GenderType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="F"/>
+            <xs:enumeration value="M"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- Definición del tipo para información personal -->
+    <xs:complexType name="PersonalInformationType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <!-- Restringir género a "F" o "M" -->
+            <xs:element name="Gender" type="eras:GenderType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Email" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="Nationality" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Definición del tipo EducationTypeOrigin para definir el origen -->
+    <xs:complexType name="EducationTypeOrigin">
+        <xs:sequence>
+            <xs:element name="Degree" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Institution" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <!-- Restringir número de créditos a un valor entero entre 0 y 240 -->
+            <xs:element name="CreditsAchieved" minOccurs="1" maxOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxInclusive value="240"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Definición del tipo EducationTypeDestination para definir la estancia -->
+    <xs:complexType name="EducationTypeDestination">
+        <xs:sequence>
+            <xs:element name="Degree" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Institution" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="StartDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="EndDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="numberOfSubjects" type="xs:integer" minOccurs="1" maxOccurs="1"></xs:element>
+            <!-- Nuevo elemento para asignaturas -->
+            <xs:element name="Subject" minOccurs="1" maxOccurs="10">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="Credits" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="Description" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="Specialization" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <!-- Restricciones para las fechas de inicio y fin -->
+        <xs:assert test="xs:date(EndDate) &gt;= xs:date(StartDate)"/>
+        <xs:assert test="xs:date(StartDate) &gt;= xs:date(current-date())"/>    
+        <xs:assert test="((12 * year-from-date(xs:date(EndDate)) + month-from-date(xs:date(EndDate))) - (12 * year-from-date(xs:date(StartDate)) + month-from-date(xs:date(StartDate))) = 4 and numberOfSubjects=5) or ((12 * year-from-date(xs:date(EndDate)) + month-from-date(xs:date(EndDate))) - (12 * year-from-date(xs:date(StartDate)) + month-from-date(xs:date(StartDate))) = 8 and numberOfSubjects=10)"/>
+    </xs:complexType>
+    
+    <!-- Definición del tipo Experience para referencias laborales y posibles prácticas durante Erasmus -->
+    <xs:complexType name="ExperienceType">
+        <xs:sequence>
+            <xs:element name="Position" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Employer" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="StartDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="EndDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+        <!-- Restricciones para las fechas de inicio y fin -->
+        <xs:assert test="xs:date(EndDate) &gt;= xs:date(StartDate)"/>
+        <xs:assert test="xs:date(StartDate) &gt;= xs:date(current-date())"/>
+        <xs:assert test="((12 * year-from-date(xs:date(EndDate)) + month-from-date(xs:date(EndDate))) - (12 * year-from-date(xs:date(StartDate)) + month-from-date(xs:date(StartDate))) &lt;= 3) and ((12 * year-from-date(xs:date(EndDate)) + month-from-date(xs:date(EndDate))) - (12 * year-from-date(xs:date(StartDate)) + month-from-date(xs:date(StartDate))) >= 1)"/>
+    </xs:complexType>
+    
+</xs:schema>

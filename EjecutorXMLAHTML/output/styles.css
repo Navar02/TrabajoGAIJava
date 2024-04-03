@@ -1,0 +1,17 @@
+/* Estilos para los alumnos */
+.alumno {
+    border: 4px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las secciones */
+h2 {
+    margin-top: 20px;
+}
+
+.section {
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:eras="http://www.erasmusG4-6.org"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+    xmlns:espania="http://www.erasmusG4-6/espania.org"
+    targetNamespace="http://www.erasmusG4-6/espania.org"
+    attributeFormDefault="qualified" vc:minVersion="1.1">
+    
+    <!-- Importación del esquema base -->
+    <xs:import namespace="http://www.erasmusG4-6.org" schemaLocation="erasmus.xsd"/>
+    
+    <!-- Definición del enumeration para las comunidades autónomas -->
+    <xs:simpleType name="ComunidadAutonomaType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Andalucía"/>
+            <xs:enumeration value="Aragón"/>
+            <xs:enumeration value="Asturias"/>
+            <xs:enumeration value="Islas Baleares"/>
+            <xs:enumeration value="Islas Canarias"/>
+            <xs:enumeration value="Cantabria"/>
+            <xs:enumeration value="Castilla-La Mancha"/>
+            <xs:enumeration value="Castilla y León"/>
+            <xs:enumeration value="Cataluña"/>
+            <xs:enumeration value="Extremadura"/>
+            <xs:enumeration value="Galicia"/>
+            <xs:enumeration value="La Rioja"/>
+            <xs:enumeration value="Madrid"/>
+            <xs:enumeration value="Murcia"/>
+            <xs:enumeration value="Navarra"/>
+            <xs:enumeration value="País Vasco"/>
+            <xs:enumeration value="Comunidad Valenciana"/>
+            <xs:enumeration value="Ceuta"/>
+            <xs:enumeration value="Melilla"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- Extensión de la información personal para incluir datos específicos de España -->
+    <xs:complexType name="PersonalInformationTypeSpain">
+        <xs:complexContent>
+            <xs:extension base="eras:PersonalInformationType">
+                <xs:sequence>
+                    <xs:element name="DNI" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="Direccion" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="Ciudad" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="CodigoPostal" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="ComunidadAutonoma" type="espania:ComunidadAutonomaType" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+                <!-- Aserción para verificar que las direcciones comiencen con "C/", "Av/", o "Cam/" -->
+                <xs:assert test="matches(Direccion, '^(C\/|Av\/|Cam\/)')"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <!-- Extensión de EducationTypeOrigin con elementos propios de universidades españolas -->
+    <xs:complexType name="EducationTypeOriginSpain">
+        <xs:complexContent>
+            <xs:extension base="eras:EducationTypeOrigin">
+                <xs:sequence>
+                    <xs:element name="Campus" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="Facultad"  minOccurs="1" maxOccurs="1">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="Ciencias"/>
+                                <xs:enumeration value="Letras"/>
+                                <xs:enumeration value="Artes"/>
+                            </xs:restriction> 
+                        </xs:simpleType>   
+                    </xs:element>
+                    <xs:element name="Departamento" minOccurs="1" maxOccurs="1">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="Psicología"/>
+                                <xs:enumeration value="Humanidades"/>
+                                <xs:enumeration value="Economía"/>
+                                <xs:enumeration value="Ingeniería"/>
+                                <xs:enumeration value="Matemáticas"/>
+                                <xs:enumeration value="Física y Quimica"/>
+                                <xs:enumeration value="Bellas Artes"/>
+                            </xs:restriction> 
+                        </xs:simpleType>   
+                    </xs:element>
+                </xs:sequence>
+                <!-- Aserción para verificar que las facultades de letras no sean del departamento de ciencias" -->
+                <xs:assert test="if (Facultad = 'Letras') then (Departamento = 'Psicología' or Departamento = 'Humanidades' or Departamento = 'Economía') else true()"/>
+                <xs:assert test="if (Facultad = 'Ciencias') then (Departamento = 'Ingeniería' or Departamento = 'Matemáticas' or Departamento = 'Física y Quimica') else true()"/>
+                <xs:assert test="if (Facultad = 'Artes') then (Departamento = 'Bellas Artes') else true()"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    
+    <!-- Definición del nuevo tipo para experiencia laboral específica de España -->
+    <xs:complexType name="ExperienceTypeSpain">
+        <xs:complexContent>
+            <xs:extension base="eras:ExperienceType">
+                <xs:sequence>
+                    <xs:element name="Empresa" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="Ciudad" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="Salario" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+                <!-- Nuevas aserciones para validar la experiencia laboral en España -->
+                <xs:assert test="exists(Ciudad) and exists(Empresa)"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+</xs:schema>

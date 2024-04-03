@@ -1,0 +1,62 @@
+<eras:Compendium xmlns:eras="http://www.erasmusG4-6.org"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.erasmusG4-6.org erasmus.xsd">
+    <Alumno>
+        <PersonalInformation>
+            <Name>John Doe</Name>
+            <Gender>M</Gender>
+            <Email>john.doe@example.com</Email>
+            <Nationality>US</Nationality>
+        </PersonalInformation>
+        <OriginUniversity>
+            <Degree>Bachelor of Science in Computer Science</Degree>
+            <Institution>University of Example</Institution>
+            <CreditsAchieved>120</CreditsAchieved>
+        </OriginUniversity>
+        <ErasmusDestination>
+            
+            <Degree>Computer Engineering</Degree>
+            <Institution>University of Another Example</Institution>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2025-05-31</EndDate>
+            <numberOfSubjects>10</numberOfSubjects>
+            <Subject>
+                <Name>Data Structures</Name>
+                <Credits>6</Credits>
+                <Description>An introductory course to data structures.</Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Data Structures</Name>
+                <Credits>6</Credits>
+                <Description>An introductory course to data structures.</Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Data Structures</Name>
+                <Credits>6</Credits>
+                <Description>An introductory course to data structures.</Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Data Structures</Name>
+                <Credits>6</Credits>
+                <Description>An introductory course to data structures.</Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Data Structures</Name>
+                <Credits>6</Credits>
+                <Description>An introductory course to data structures.</Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+        </ErasmusDestination>
+        <!-- Nuevo elemento ExperienceType -->
+        <Experience>
+            <Position></Position>
+            <Employer></Employer>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2024-12-30</EndDate>
+        </Experience>
+    </Alumno>
+</eras:Compendium>

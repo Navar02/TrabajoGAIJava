@@ -1,0 +1,501 @@
+<eras:Compendium xmlns:eras="http://www.erasmusG4-6.org"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:espania="http://www.erasmusG4-6/espania.org"
+    xsi:schemaLocation="http://www.erasmusG4-6.org erasmus.xsd http://www.erasmusG4-6/espania.org espania.xsd">
+    <Alumno>
+        <PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
+            <Name>John Doe</Name>
+            <Gender>M</Gender>
+            <Email>john.doe@example.com</Email>
+            <Nationality>ESP</Nationality>
+            <DNI>98765432B</DNI>
+            <Direccion>Av/Diagonal, 123</Direccion>
+            <Ciudad>Barcelona</Ciudad>
+            <CodigoPostal>08001</CodigoPostal>
+            <ComunidadAutonoma>Cataluña</ComunidadAutonoma>
+        </PersonalInformation>
+       
+        <OriginUniversity xsi:type="espania:EducationTypeOriginSpain">
+            <Degree>Bachelor in Computer Science</Degree>
+            <Institution>University of Barcelona</Institution>
+            <CreditsAchieved>200</CreditsAchieved>
+            <Campus> Barcelona</Campus>
+            <Facultad>Ciencias</Facultad>
+            <Departamento>Ingeniería</Departamento>
+        </OriginUniversity>
+        
+        <ErasmusDestination>    
+            <Degree>Computer Engineering</Degree>
+            <Institution>University of Another Example</Institution>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2025-01-31</EndDate>
+            <numberOfSubjects>5</numberOfSubjects>
+            <Subject>
+                <Name>Data Structures</Name>
+                <Credits>6</Credits>
+                <Description>An introductory course to data structures.</Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+            <Subject>
+                <Name>IOS</Name>
+                <Credits>6</Credits>
+                <Description></Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+            <Subject>
+                <Name>OR</Name>
+                <Credits>6</Credits>
+                <Description></Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+            <Subject>
+                <Name>ICR</Name>
+                <Credits>6</Credits>
+                <Description></Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+            <Subject>
+                <Name>MEI</Name>
+                <Credits>6</Credits>
+                <Description></Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+        </ErasmusDestination>
+        <!-- Nuevo elemento ExperienceType -->
+        <Experience xsi:type="espania:ExperienceTypeSpain">
+            <Position></Position>
+            <Employer></Employer>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2024-12-30</EndDate>
+            <Empresa>Comensa SA</Empresa>
+            <Ciudad>Badalona</Ciudad>
+        </Experience>
+    </Alumno>
+    <!-- Alumno 2 -->
+    <Alumno>
+        <PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
+            <Name>Maria López</Name>
+            <Gender>F</Gender>
+            <Email>maria.lopez@example.com</Email>
+            <Nationality>ESP</Nationality>
+            <DNI>12345678C</DNI>
+            <Direccion>C/ Mayor, 45</Direccion>
+            <Ciudad>Madrid</Ciudad>
+            <CodigoPostal>28000</CodigoPostal>
+            <ComunidadAutonoma>Madrid</ComunidadAutonoma>
+        </PersonalInformation>
+        
+        <OriginUniversity xsi:type="espania:EducationTypeOriginSpain">
+            <Degree>Bachelor in History</Degree>
+            <Institution>University of Madrid</Institution>
+            <CreditsAchieved>180</CreditsAchieved>
+            <Campus>Madrid</Campus>
+            <Facultad>Letras</Facultad>
+            <Departamento>Humanidades</Departamento>
+        </OriginUniversity>
+        
+        <ErasmusDestination>    
+            <Degree>History</Degree>
+            <Institution>University of Paris</Institution>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2025-05-31</EndDate>
+            <numberOfSubjects>10</numberOfSubjects>
+            <!-- Subjects -->
+            <Subject>
+                <Name></Name>
+                <Credits>6</Credits>
+                <Description></Description>
+                <Specialization></Specialization>
+            </Subject>
+        </ErasmusDestination>
+        
+        <Experience xsi:type="espania:ExperienceTypeSpain">
+            <Position>Intern</Position>
+            <Employer>ABC Consulting</Employer>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2024-12-30</EndDate>
+            <Empresa>ACME Corporation</Empresa>
+            <Ciudad>Barcelona</Ciudad>
+        </Experience>
+    </Alumno>
+    
+    <!-- Alumno 3 -->
+    <Alumno>
+        <PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
+            <Name>Carlos Ruiz</Name>
+            <Gender>M</Gender>
+            <Email>carlos.ruiz@example.com</Email>
+            <Nationality>ESP</Nationality>
+            <DNI>87654321D</DNI>
+            <Direccion>C/ Gran Vía, 100</Direccion>
+            <Ciudad>Madrid</Ciudad>
+            <CodigoPostal>28013</CodigoPostal>
+            <ComunidadAutonoma>Madrid</ComunidadAutonoma>
+        </PersonalInformation>
+        
+        <OriginUniversity xsi:type="espania:EducationTypeOriginSpain">
+            <Degree>Bachelor in Economics</Degree>
+            <Institution>University of Madrid</Institution>
+            <CreditsAchieved>200</CreditsAchieved>
+            <Campus>Madrid</Campus>
+            <Facultad>Ciencias</Facultad>
+            <Departamento>Matemáticas</Departamento>
+        </OriginUniversity>
+        
+        <ErasmusDestination>    
+            <Degree>Economics</Degree>
+            <Institution>University of London</Institution>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2025-01-31</EndDate>
+            <numberOfSubjects>5</numberOfSubjects>
+            <!-- Subjects -->
+            <Subject>
+                <Name>Macroeconomía</Name>
+                <Credits>6</Credits>
+                <Description>La macroeconomía se ocupa del estudio de la economía en su conjunto, centrándose en variables como el crecimiento económico, la inflación, el desempleo y la política fiscal y monetaria. Analiza los factores que influyen en el desempeño económico a nivel nacional o global y las políticas que los gobiernos pueden implementar para influir en estos factores.</Description>
+                <Specialization>General</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Microeconomía</Name>
+                <Credits>6</Credits>
+                <Description>La microeconomía se centra en el estudio del comportamiento económico de unidades individuales, como consumidores, empresas y mercados específicos. Examina cómo se toman decisiones económicas en un nivel individual y cómo estas decisiones afectan la asignación de recursos y los precios en los mercados.</Description>
+                <Specialization>General</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Econometría</Name>
+                <Credits>6</Credits>
+                <Description>La econometría combina la teoría económica, las matemáticas y la estadística para analizar datos económicos y formular y probar modelos económicos cuantitativos. Se utiliza para estimar relaciones causales entre variables económicas y predecir el comportamiento futuro de la economía.</Description>
+                <Specialization>General</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Economía Internacional</Name>
+                <Credits>6</Credits>
+                <Description> La economía internacional se centra en el estudio de las interacciones económicas entre países, incluyendo el comercio internacional, las finanzas internacionales y las políticas comerciales. Examina cómo se determinan los flujos comerciales y financieros entre países y los efectos de la globalización en las economías nacionales.</Description>
+                <Specialization>General</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Economía del Desarrollo</Name>
+                <Credits>6</Credits>
+                <Description>La economía del desarrollo se ocupa del estudio de los problemas económicos y sociales en los países en desarrollo. Examina los determinantes del desarrollo económico, incluyendo la pobreza, la desigualdad, el crecimiento económico, la salud y la educación, así como las políticas y estrategias para promover el desarrollo sostenible.</Description>
+                <Specialization>General</Specialization>
+            </Subject>
+        </ErasmusDestination>
+        
+        <Experience xsi:type="espania:ExperienceTypeSpain">
+            <Position>Marketing Assistant</Position>
+            <Employer>Marketing Solutions Ltd.</Employer>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2024-12-30</EndDate>
+            <Empresa>Global Marketing</Empresa>
+            <Ciudad>Madrid</Ciudad>
+        </Experience>
+    </Alumno>
+    
+    <!-- Alumno 4 -->
+    <Alumno>
+        <PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
+            <Name>Laura García</Name>
+            <Gender>F</Gender>
+            <Email>laura.garcia@example.com</Email>
+            <Nationality>ESP</Nationality>
+            <DNI>76543210E</DNI>
+            <Direccion>Av/Plaza Mayor, 1</Direccion>
+            <Ciudad>Salamanca</Ciudad>
+            <CodigoPostal>37002</CodigoPostal>
+            <ComunidadAutonoma>Castilla y León</ComunidadAutonoma>
+        </PersonalInformation>
+        
+        <OriginUniversity xsi:type="espania:EducationTypeOriginSpain">
+            <Degree>Bachelor in Architecture</Degree>
+            <Institution>University of Salamanca</Institution>
+            <CreditsAchieved>220</CreditsAchieved>
+            <Campus>Salamanca</Campus>
+            <Facultad>Artes</Facultad>
+            <Departamento>Bellas Artes</Departamento>
+        </OriginUniversity>
+        
+        <ErasmusDestination>    
+            <Degree>Architecture</Degree>
+            <Institution>Politecnico di Milano</Institution>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2025-05-31</EndDate>
+            <numberOfSubjects>10</numberOfSubjects>
+            <!-- Subjects -->
+            <Subject>
+                <Name>Diseño Arquitectónico</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de los principios y técnicas del diseño arquitectónico, incluyendo la conceptualización, el desarrollo de proyectos y la representación gráfica de ideas arquitectónicas.</Description>
+                <Specialization>Arquitectura</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Historia de la Arquitectura</Name>
+                <Credits>6</Credits>
+                <Description>Exploración de la evolución histórica de la arquitectura, desde las primeras civilizaciones hasta la arquitectura contemporánea. Se analizan estilos arquitectónicos, obras y contextos culturales.</Description>
+                <Specialization>Arquitectura</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Urbanismo</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de la planificación y diseño de espacios urbanos, incluyendo el desarrollo de ciudades, la distribución del territorio, la infraestructura urbana y la calidad de vida en entornos urbanos.</Description>
+                <Specialization>Arquitectura</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Construcción</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de los materiales, técnicas y procesos de construcción utilizados en la edificación de estructuras arquitectónicas. Se abordan temas como la resistencia de materiales, la estructura de edificios y la seguridad en la construcción.</Description>
+                <Specialization>Arquitectura</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Arquitectura Sostenible</Name>
+                <Credits>6</Credits>
+                <Description>Exploración de los principios y prácticas de diseño arquitectónico que promueven la sostenibilidad ambiental, social y económica. Se estudian estrategias para minimizar el impacto ambiental de los edificios y maximizar su eficiencia energética.</Description>
+                <Specialization>Arquitectura</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Teoría de la Arquitectura</Name>
+                <Credits>6</Credits>
+                <Description>Análisis de los fundamentos teóricos y conceptuales que sustentan la práctica arquitectónica. Se examinan las ideas y corrientes de pensamiento que han influido en la evolución del pensamiento arquitectónico.</Description>
+                <Specialization>Arquitectura</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Taller de Proyectos</Name>
+                <Credits>6</Credits>
+                <Description>Desarrollo de proyectos arquitectónicos a través de la investigación, conceptualización y elaboración de propuestas creativas. Se enfoca en la integración de conocimientos teóricos y prácticos para resolver problemas de diseño.</Description>
+                <Specialization>Arquitectura</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Tecnología de la Construcción</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de los sistemas y procesos constructivos utilizados en la edificación de estructuras arquitectónicas. Se abordan temas como los materiales de construcción, los sistemas estructurales, la climatización, la iluminación y la acústica.</Description>
+                <Specialization>Arquitectura</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Dibujo Arquitectónico</Name>
+                <Credits>6</Credits>
+                <Description>Desarrollo de habilidades en el dibujo técnico y artístico aplicado a la representación de proyectos arquitectónicos. Se estudian técnicas de dibujo a mano alzada, dibujo asistido por ordenador (CAD) y representación gráfica tridimensional.</Description>
+                <Specialization>Arquitectura</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Arquitectura del Paisaje</Name>
+                <Credits>6</Credits>
+                <Description>Estudio del diseño y planificación de espacios exteriores, incluyendo parques, jardines, plazas y áreas naturales. Se analizan conceptos de integración paisajística, conservación del medio ambiente y valoración estética del entorno.</Description>
+                <Specialization>Arquitectura</Specialization>
+            </Subject>
+        </ErasmusDestination>
+        
+        <Experience xsi:type="espania:ExperienceTypeSpain">
+            <Position>Intern Architect</Position>
+            <Employer>Architecture Studio</Employer>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2024-12-30</EndDate>
+            <Empresa>Design Solutions</Empresa>
+            <Ciudad>Salamanca</Ciudad>
+        </Experience>
+    </Alumno>
+    
+    <!-- Alumno 5 -->
+    <Alumno>
+        <PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
+            <Name>Julia Fernandez</Name>
+            <Gender>F</Gender>
+            <Email>julia.fernandez@example.com</Email>
+            <Nationality>ESP</Nationality>
+            <DNI>65432109F</DNI>
+            <Direccion>C/ Mayor, 12</Direccion>
+            <Ciudad>Sevilla</Ciudad>
+            <CodigoPostal>41001</CodigoPostal>
+            <ComunidadAutonoma>Andalucía</ComunidadAutonoma>
+        </PersonalInformation>
+        
+        <OriginUniversity xsi:type="espania:EducationTypeOriginSpain">
+            <Degree>Bachelor in Medicine</Degree>
+            <Institution>University of Seville</Institution>
+            <CreditsAchieved>240</CreditsAchieved>
+            <Campus>Sevilla</Campus>
+            <Facultad>Letras</Facultad>
+            <Departamento>Psicología</Departamento>
+        </OriginUniversity>
+        
+        <ErasmusDestination>    
+            <Degree>Medicine</Degree>
+            <Institution>University of Rome</Institution>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2025-05-31</EndDate>
+            <numberOfSubjects>10</numberOfSubjects>
+            <!-- Subjects -->
+            <Subject>
+                <Name>Estudio Basico de psicología forense</Name>
+                <Credits>6</Credits>
+                <Description/>
+                <Specialization/>
+            </Subject>
+            <Subject>
+                <Name>Psicología General</Name>
+                <Credits>6</Credits>
+                <Description>Introducción a los principios básicos de la psicología, incluyendo los procesos mentales, el comportamiento humano, los métodos de investigación y las principales teorías psicológicas.</Description>
+                <Specialization>General</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Psicología del Desarrollo</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de los cambios psicológicos que ocurren a lo largo de la vida, desde la infancia hasta la vejez. Incluye el desarrollo físico, cognitivo, emocional y social, así como los factores que influyen en dicho desarrollo.</Description>
+                <Specialization>General</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Psicología Social</Name>
+                <Credits>6</Credits>
+                <Description>Exploración de cómo las personas piensan, sienten y se comportan en situaciones sociales. Se centra en temas como la percepción social, la influencia social, los prejuicios, la conformidad y el comportamiento grupal.</Description>
+                <Specialization>General</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Psicopatología</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de los trastornos mentales y emocionales, incluyendo sus causas, síntomas, diagnóstico y tratamiento. Se analizan diversos trastornos, como la ansiedad, la depresión, la esquizofrenia, los trastornos del estado de ánimo, entre otros.</Description>
+                <Specialization>General</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Neuropsicología</Name>
+                <Credits>6</Credits>
+                <Description>Investigación de la relación entre el cerebro y el comportamiento humano. Se examinan los efectos de las lesiones cerebrales, enfermedades neurológicas y trastornos del desarrollo en el funcionamiento cognitivo y emocional.</Description>
+                <Specialization>General</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Psicología Cognitiva</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de los procesos mentales implicados en el pensamiento, la percepción, la memoria, el lenguaje y la resolución de problemas. Se exploran los modelos teóricos y los métodos de investigación utilizados para comprender la cognición humana.</Description>
+                <Specialization>General</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Psicología Clínica</Name>
+                <Credits>6</Credits>
+                <Description>Formación en evaluación, diagnóstico y tratamiento de problemas psicológicos y trastornos mentales. Se incluyen técnicas terapéuticas como la terapia cognitivo-conductual, la terapia de apoyo, la terapia interpersonal, entre otras.</Description>
+                <Specialization>General</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Psicología Organizacional</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de la psicología aplicada al ámbito laboral y organizacional. Se analizan temas como el liderazgo, la motivación, el trabajo en equipo, la cultura organizacional, la selección de personal y el desarrollo de carrera.</Description>
+                <Specialization>General</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Psicología Educativa</Name>
+                <Credits>6</Credits>
+                <Description>Investigación de los procesos psicológicos implicados en el aprendizaje y la enseñanza. Se exploran teorías del desarrollo cognitivo, estilos de aprendizaje, estrategias de enseñanza, evaluación del rendimiento académico, entre otros aspectos relacionados con la educación.</Description>
+                <Specialization>General</Specialization>
+            </Subject>
+            
+        </ErasmusDestination>
+        
+        <Experience xsi:type="espania:ExperienceTypeSpain">
+            <Position>Medical Intern</Position>
+            <Employer>Seville Hospital</Employer>
+            <StartDate>2024-12-01</StartDate>
+            <EndDate>2025-01-31</EndDate>
+            <Empresa>Health Solutions</Empresa>
+            <Ciudad>Sevilla</Ciudad>
+        </Experience>
+    </Alumno>
+    
+    <!-- Alumno 6 -->
+    <Alumno>
+        <PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
+            <Name>Javier Pérez</Name>
+            <Gender>M</Gender>
+            <Email>javier.perez@example.com</Email>
+            <Nationality>ESP</Nationality>
+            <DNI>54321098G</DNI>
+            <Direccion>C/Paseo del Prado, 28</Direccion>
+            <Ciudad>Madrid</Ciudad>
+            <CodigoPostal>28014</CodigoPostal>
+            <ComunidadAutonoma>Madrid</ComunidadAutonoma>
+        </PersonalInformation>
+        
+        <OriginUniversity xsi:type="espania:EducationTypeOriginSpain">
+            <Degree>Bachelor in Law</Degree>
+            <Institution>University of Madrid</Institution>
+            <CreditsAchieved>220</CreditsAchieved>
+            <Campus>Madrid</Campus>
+            <Facultad>Letras</Facultad>
+            <Departamento>Economía</Departamento>
+        </OriginUniversity>
+        
+        <ErasmusDestination>    
+            <Degree>Law</Degree>
+            <Institution>University of California, Berkeley</Institution>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2025-05-31</EndDate>
+            <numberOfSubjects>10</numberOfSubjects>
+            <!-- Subjects -->
+            <Subject>
+                <Name>Derecho Constitucional</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de la organización y funcionamiento del Estado, así como de los derechos y libertades fundamentales de los ciudadanos. Se analizan temas como la separación de poderes, el sistema de gobierno, los derechos políticos y las garantías constitucionales.</Description>
+                <Specialization>Derecho</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Derecho Civil</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de las normas que regulan las relaciones entre individuos en el ámbito privado. Se abordan temas como el derecho de familia, el derecho de obligaciones y contratos, la propiedad, los derechos reales, entre otros.</Description>
+                <Specialization>Derecho</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Derecho Penal</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de las normas que regulan el castigo de los delitos y las faltas. Se examinan los elementos del delito, las penas, las medidas de seguridad, los delitos en particular y los principios generales del derecho penal.</Description>
+                <Specialization>Derecho</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Derecho Administrativo</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de las normas que regulan la organización y funcionamiento de la Administración Pública. Se abordan temas como el procedimiento administrativo, el régimen jurídico de los servicios públicos, la responsabilidad de la Administración, entre otros.</Description>
+                <Specialization>Derecho</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Derecho Mercantil</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de las normas que regulan las relaciones jurídicas derivadas de la actividad empresarial. Se analizan temas como el contrato de compraventa mercantil, el derecho de sociedades, el derecho cambiario, la competencia desleal, entre otros.</Description>
+                <Specialization>Derecho</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Derecho Internacional Público</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de las normas que regulan las relaciones entre los Estados y otros sujetos del derecho internacional. Se abordan temas como la formación y extinción de los tratados, la responsabilidad internacional, el uso de la fuerza, entre otros.</Description>
+                <Specialization>Derecho</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Derecho Internacional Privado</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de las normas que regulan las relaciones jurídicas privadas con elementos extranjeros. Se analizan temas como la competencia judicial internacional, la ley aplicable a los contratos y las obligaciones, el reconocimiento y ejecución de sentencias extranjeras, entre otros.</Description>
+                <Specialization>Derecho</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Derecho Laboral</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de las normas que regulan las relaciones laborales entre empleadores y trabajadores. Se examinan temas como los contratos de trabajo, la negociación colectiva, la seguridad social, la terminación del contrato laboral, entre otros.</Description>
+                <Specialization>Derecho</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Derecho Financiero y Tributario</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de las normas que regulan el sistema financiero y tributario de un país. Se abordan temas como los impuestos, los procedimientos tributarios, el presupuesto del Estado, la deuda pública, entre otros aspectos relacionados con la actividad financiera y fiscal.</Description>
+                <Specialization>Derecho</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Derecho de la Unión Europea</Name>
+                <Credits>6</Credits>
+                <Description>Estudio de las normas y principios que rigen la Unión Europea. Se analizan temas como las instituciones de la UE, el derecho comunitario, la libre circulación de personas, bienes, servicios y capitales, así como la competencia y la política de la UE en diferentes áreas.</Description>
+                <Specialization>Derecho</Specialization>
+            </Subject>
+        </ErasmusDestination>
+        
+        <Experience xsi:type="espania:ExperienceTypeSpain">
+            <Position>Legal Intern</Position>
+            <Employer>Law Firm</Employer>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2024-12-30</EndDate>
+            <Empresa>Legal Solutions</Empresa>
+            <Ciudad>Madrid</Ciudad>
+        </Experience>
+    </Alumno>
+    
+</eras:Compendium>
