@@ -97,6 +97,7 @@
                     <xs:element name="Empresa" type="xs:string" minOccurs="1" maxOccurs="1"/>
                     <xs:element name="Ciudad" type="xs:string" minOccurs="1" maxOccurs="1"/>
                     <xs:element name="Salario" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+                    <xs:any processContents="strict" maxOccurs="unbounded" minOccurs="0"></xs:any>
                 </xs:sequence>
                 <!-- Nuevas aserciones para validar la experiencia laboral en España -->
                 <xs:assert test="exists(Ciudad) and exists(Empresa)"/>
