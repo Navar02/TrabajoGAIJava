@@ -24,7 +24,7 @@
             <Departamento>Ingeniería</Departamento>
         </OriginUniversity>
         
-        <ErasmusDestination>    
+        <eras:ErasmusDestination>    
             <Degree>Computer Engineering</Degree>
             <Institution>University of Another Example</Institution>
             <StartDate>2024-09-01</StartDate>
@@ -60,7 +60,7 @@
                 <Description></Description>
                 <Specialization>Computer Science</Specialization>
             </Subject>
-        </ErasmusDestination>
+        </eras:ErasmusDestination>
         <!-- Nuevo elemento ExperienceType -->
         <Experience xsi:type="espania:ExperienceTypeSpain">
             <Position></Position>
@@ -94,7 +94,7 @@
             <Departamento>Humanidades</Departamento>
         </OriginUniversity>
         
-        <ErasmusDestination>    
+        <eras:ErasmusDestination>    
             <Degree>History</Degree>
             <Institution>University of Paris</Institution>
             <StartDate>2024-09-01</StartDate>
@@ -107,7 +107,7 @@
                 <Description></Description>
                 <Specialization></Specialization>
             </Subject>
-        </ErasmusDestination>
+        </eras:ErasmusDestination>
         
         <Experience xsi:type="espania:ExperienceTypeSpain">
             <Position>Intern</Position>
@@ -142,7 +142,7 @@
             <Departamento>Matemáticas</Departamento>
         </OriginUniversity>
         
-        <ErasmusDestination>    
+        <eras:ErasmusDestination>    
             <Degree>Economics</Degree>
             <Institution>University of London</Institution>
             <StartDate>2024-09-01</StartDate>
@@ -179,7 +179,7 @@
                 <Description>La economía del desarrollo se ocupa del estudio de los problemas económicos y sociales en los países en desarrollo. Examina los determinantes del desarrollo económico, incluyendo la pobreza, la desigualdad, el crecimiento económico, la salud y la educación, así como las políticas y estrategias para promover el desarrollo sostenible.</Description>
                 <Specialization>General</Specialization>
             </Subject>
-        </ErasmusDestination>
+        </eras:ErasmusDestination>
         
         <Experience xsi:type="espania:ExperienceTypeSpain">
             <Position>Marketing Assistant</Position>
@@ -214,7 +214,7 @@
             <Departamento>Bellas Artes</Departamento>
         </OriginUniversity>
         
-        <ErasmusDestination>    
+        <eras:ErasmusDestination>    
             <Degree>Architecture</Degree>
             <Institution>Politecnico di Milano</Institution>
             <StartDate>2024-09-01</StartDate>
@@ -281,7 +281,7 @@
                 <Description>Estudio del diseño y planificación de espacios exteriores, incluyendo parques, jardines, plazas y áreas naturales. Se analizan conceptos de integración paisajística, conservación del medio ambiente y valoración estética del entorno.</Description>
                 <Specialization>Arquitectura</Specialization>
             </Subject>
-        </ErasmusDestination>
+        </eras:ErasmusDestination>
         
         <Experience xsi:type="espania:ExperienceTypeSpain">
             <Position>Intern Architect</Position>
@@ -316,7 +316,7 @@
             <Departamento>Psicología</Departamento>
         </OriginUniversity>
         
-        <ErasmusDestination>    
+        <eras:ErasmusDestination>    
             <Degree>Medicine</Degree>
             <Institution>University of Rome</Institution>
             <StartDate>2024-09-01</StartDate>
@@ -384,7 +384,7 @@
                 <Specialization>General</Specialization>
             </Subject>
             
-        </ErasmusDestination>
+        </eras:ErasmusDestination>
         
         <Experience xsi:type="espania:ExperienceTypeSpain">
             <Position>Medical Intern</Position>
@@ -419,7 +419,7 @@
             <Departamento>Economía</Departamento>
         </OriginUniversity>
         
-        <ErasmusDestination>    
+        <eras:ErasmusDestination>    
             <Degree>Law</Degree>
             <Institution>University of California, Berkeley</Institution>
             <StartDate>2024-09-01</StartDate>
@@ -486,7 +486,7 @@
                 <Description>Estudio de las normas y principios que rigen la Unión Europea. Se analizan temas como las instituciones de la UE, el derecho comunitario, la libre circulación de personas, bienes, servicios y capitales, así como la competencia y la política de la UE en diferentes áreas.</Description>
                 <Specialization>Derecho</Specialization>
             </Subject>
-        </ErasmusDestination>
+        </eras:ErasmusDestination>
         
         <Experience xsi:type="espania:ExperienceTypeSpain">
             <Position>Legal Intern</Position>

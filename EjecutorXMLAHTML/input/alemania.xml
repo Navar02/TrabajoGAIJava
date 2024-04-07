@@ -19,7 +19,7 @@
             <GradeType>Higher Technical Certificate</GradeType>
             <Extra>Online</Extra>
         </OriginUniversity>
-        <ErasmusDestination xsi:type="ale:EducationTypeDestinationAle">
+        <eras:ErasmusDestination xsi:type="ale:EducationTypeDestinationAle">
             
             <Degree>Computer Engineering</Degree>
             <Institution>University of Another Example</Institution>
@@ -56,7 +56,7 @@
                 <Description>An advanced course into computer hardware focused on gathering data by sensors.</Description>
                 <Specialization>Computer Science</Specialization>
             </Subject>
-        </ErasmusDestination>
+        </eras:ErasmusDestination>
         <!-- Nuevo elemento ExperienceType -->
         <Experience>
             <Position>Becaria</Position>
