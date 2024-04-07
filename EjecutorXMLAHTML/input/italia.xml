@@ -9,6 +9,8 @@
             <Gender>M</Gender>
             <Email>john.doe@example.com</Email>
             <Nationality>Spain</Nationality>
+            <ita:PizzaPreference>Pizza al pastrami</ita:PizzaPreference>
+            <ita:GelatoPreference>KKKKKKKKK Gelato</ita:GelatoPreference>
         </ita:ExtPersonalInformation>
         
         <OriginUniversity>
@@ -60,6 +62,47 @@
             <Employer></Employer>
             <StartDate>2024-09-01</StartDate>
             <EndDate>2024-12-30</EndDate>
+        </Experience>
+    </Alumno>
+    
+    <!-- Alumno 2 -->
+    <Alumno>
+        <ita:ExtPersonalInformation>
+            <Name>Jane Smith</Name>
+            <Gender>F</Gender>
+            <Email>jane.smith@example.com</Email>
+            <Nationality>Germany</Nationality>
+            <ita:PizzaPreference>Pizza con todo</ita:PizzaPreference>
+            <ita:GelatoPreference>Chocolate Gelato</ita:GelatoPreference>
+            <Allergies>Alimentary</Allergies>
+        </ita:ExtPersonalInformation>
+        
+        <OriginUniversity>
+            <Degree>Bachelor of Arts in History</Degree>
+            <Institution>University of Another Country</Institution>
+            <CreditsAchieved>100</CreditsAchieved>
+        </OriginUniversity>
+        
+        <eras:ErasmusDestination>
+            <Degree>History</Degree>
+            <Institution>University of Yet Another Example</Institution>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2025-05-30</EndDate>
+            <numberOfSubjects>10</numberOfSubjects>
+            <Subject>
+                <Name>European History</Name>
+                <Credits>4</Credits>
+                <Description>An overview of European history.</Description>
+                <Specialization>History</Specialization>
+            </Subject>
+            <!-- More subjects can be added here -->
+        </eras:ErasmusDestination>
+        
+        <Experience>
+            <Position>Research Assistant</Position>
+            <Employer>Historical Society</Employer>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2024-12-31</EndDate>
         </Experience>
     </Alumno>
 </eras:Compendium>

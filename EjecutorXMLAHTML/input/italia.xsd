@@ -61,6 +61,21 @@
         </xs:complexContent>
     </xs:complexType>
     
+    <!-- Definir otros elementos específicos para estudiantes italianos -->
+    <xs:element name="PizzaPreference" >
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="Pizza.*"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="GelatoPreference">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value=".*Gelato"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
     
     <xs:element name="Regions" type="ita:ITA_RegionsT"/>
     
