@@ -17,11 +17,10 @@
     <!-- Definición del elemento Curriculum para los alumnos -->
     <xs:complexType name="CurriculumAlumni">
         <xs:sequence>
-            <xs:element ref="eras:PersonalInformation" maxOccurs="1"/>
+            <xs:element ref="eras:PersonalInformation" minOccurs="1" maxOccurs="1"/>
             <xs:element name="OriginUniversity" type="eras:EducationTypeOrigin" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="ErasmusDestination" type="eras:EducationTypeDestination" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="eras:ErasmusDestination" minOccurs="1" maxOccurs="1"/>
             <xs:element name="Experience" type="eras:ExperienceType" minOccurs="0" maxOccurs="1"/>
-            <xs:any processContents="strict"></xs:any>
         </xs:sequence>
         <!-- aserción para comprobar que origen no sea igual al destino -->
         <xs:assert test="OriginUniversity/Institution != ErasmusDestination/Institution"/>
@@ -42,6 +41,7 @@
             <xs:element name="Gender" type="eras:GenderType" minOccurs="1" maxOccurs="1"/>
             <xs:element name="Email" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
             <xs:element name="Nationality" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:any processContents="strict" minOccurs="0"></xs:any>
         </xs:sequence>
     </xs:complexType>
     
@@ -103,5 +103,5 @@
     </xs:complexType>
     
     <xs:element name="PersonalInformation" type="eras:PersonalInformationType"/>
-    
+    <xs:element name="ErasmusDestination" type="eras:EducationTypeDestination"/>
 </xs:schema>
