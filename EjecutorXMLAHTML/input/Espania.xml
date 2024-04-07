@@ -3,7 +3,7 @@
     xmlns:espania="http://www.erasmusG4-6/espania.org"
     xsi:schemaLocation="http://www.erasmusG4-6.org erasmus.xsd http://www.erasmusG4-6/espania.org espania.xsd">
     <Alumno>
-        <PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
+        <eras:PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
             <Name>John Doe</Name>
             <Gender>M</Gender>
             <Email>john.doe@example.com</Email>
@@ -13,7 +13,7 @@
             <Ciudad>Barcelona</Ciudad>
             <CodigoPostal>08001</CodigoPostal>
             <ComunidadAutonoma>Cataluña</ComunidadAutonoma>
-        </PersonalInformation>
+        </eras:PersonalInformation>
        
         <OriginUniversity xsi:type="espania:EducationTypeOriginSpain">
             <Degree>Bachelor in Computer Science</Degree>
@@ -73,7 +73,7 @@
     </Alumno>
     <!-- Alumno 2 -->
     <Alumno>
-        <PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
+        <eras:PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
             <Name>Maria López</Name>
             <Gender>F</Gender>
             <Email>maria.lopez@example.com</Email>
@@ -83,7 +83,7 @@
             <Ciudad>Madrid</Ciudad>
             <CodigoPostal>28000</CodigoPostal>
             <ComunidadAutonoma>Madrid</ComunidadAutonoma>
-        </PersonalInformation>
+        </eras:PersonalInformation>
         
         <OriginUniversity xsi:type="espania:EducationTypeOriginSpain">
             <Degree>Bachelor in History</Degree>
@@ -121,7 +121,7 @@
     
     <!-- Alumno 3 -->
     <Alumno>
-        <PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
+        <eras:PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
             <Name>Carlos Ruiz</Name>
             <Gender>M</Gender>
             <Email>carlos.ruiz@example.com</Email>
@@ -131,7 +131,7 @@
             <Ciudad>Madrid</Ciudad>
             <CodigoPostal>28013</CodigoPostal>
             <ComunidadAutonoma>Madrid</ComunidadAutonoma>
-        </PersonalInformation>
+        </eras:PersonalInformation>
         
         <OriginUniversity xsi:type="espania:EducationTypeOriginSpain">
             <Degree>Bachelor in Economics</Degree>
@@ -193,7 +193,7 @@
     
     <!-- Alumno 4 -->
     <Alumno>
-        <PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
+        <eras:PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
             <Name>Laura García</Name>
             <Gender>F</Gender>
             <Email>laura.garcia@example.com</Email>
@@ -203,7 +203,7 @@
             <Ciudad>Salamanca</Ciudad>
             <CodigoPostal>37002</CodigoPostal>
             <ComunidadAutonoma>Castilla y León</ComunidadAutonoma>
-        </PersonalInformation>
+        </eras:PersonalInformation>
         
         <OriginUniversity xsi:type="espania:EducationTypeOriginSpain">
             <Degree>Bachelor in Architecture</Degree>
@@ -295,7 +295,7 @@
     
     <!-- Alumno 5 -->
     <Alumno>
-        <PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
+        <eras:PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
             <Name>Julia Fernandez</Name>
             <Gender>F</Gender>
             <Email>julia.fernandez@example.com</Email>
@@ -305,7 +305,7 @@
             <Ciudad>Sevilla</Ciudad>
             <CodigoPostal>41001</CodigoPostal>
             <ComunidadAutonoma>Andalucía</ComunidadAutonoma>
-        </PersonalInformation>
+        </eras:PersonalInformation>
         
         <OriginUniversity xsi:type="espania:EducationTypeOriginSpain">
             <Degree>Bachelor in Medicine</Degree>
@@ -398,7 +398,7 @@
     
     <!-- Alumno 6 -->
     <Alumno>
-        <PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
+        <eras:PersonalInformation xsi:type="espania:PersonalInformationTypeSpain">
             <Name>Javier Pérez</Name>
             <Gender>M</Gender>
             <Email>javier.perez@example.com</Email>
@@ -408,7 +408,7 @@
             <Ciudad>Madrid</Ciudad>
             <CodigoPostal>28014</CodigoPostal>
             <ComunidadAutonoma>Madrid</ComunidadAutonoma>
-        </PersonalInformation>
+        </eras:PersonalInformation>
         
         <OriginUniversity xsi:type="espania:EducationTypeOriginSpain">
             <Degree>Bachelor in Law</Degree>

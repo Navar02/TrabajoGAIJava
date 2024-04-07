@@ -17,7 +17,7 @@
     <!-- Definición del elemento Curriculum para los alumnos -->
     <xs:complexType name="CurriculumAlumni">
         <xs:sequence>
-            <xs:element name="PersonalInformation" type="eras:PersonalInformationType" maxOccurs="1"/>
+            <xs:element ref="eras:PersonalInformation" maxOccurs="1"/>
             <xs:element name="OriginUniversity" type="eras:EducationTypeOrigin" minOccurs="1" maxOccurs="1"/>
             <xs:element name="ErasmusDestination" type="eras:EducationTypeDestination" minOccurs="1" maxOccurs="1"/>
             <xs:element name="Experience" type="eras:ExperienceType" minOccurs="0" maxOccurs="1"/>
@@ -100,5 +100,7 @@
         <xs:assert test="xs:date(StartDate) &gt;= xs:date(current-date())"/>
         <xs:assert test="((12 * year-from-date(xs:date(EndDate)) + month-from-date(xs:date(EndDate))) - (12 * year-from-date(xs:date(StartDate)) + month-from-date(xs:date(StartDate))) &lt;= 3) and ((12 * year-from-date(xs:date(EndDate)) + month-from-date(xs:date(EndDate))) - (12 * year-from-date(xs:date(StartDate)) + month-from-date(xs:date(StartDate))) >= 1)"/>
     </xs:complexType>
+    
+    <xs:element name="PersonalInformation" type="eras:PersonalInformationType"/>
     
 </xs:schema>

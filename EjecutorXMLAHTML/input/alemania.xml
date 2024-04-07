@@ -3,7 +3,7 @@
     xmlns:ale="http://www.erasmusG4-6/alemania.org"
     xsi:schemaLocation="http://www.erasmusG4-6.org erasmus.xsd http://www.erasmusG4-6/alemania.org alemania.xsd">
     <Alumno>
-        <PersonalInformation xsi:type="ale:DatosPersonalesAle">
+        <eras:PersonalInformation xsi:type="ale:DatosPersonalesAle">
             <Name>Erika Mustermann</Name>
             <Gender>F</Gender>
             <Email>Erika.Mustermann@example.com</Email>
@@ -11,8 +11,8 @@
             <DIA>A123456789</DIA>
             <BirthDate>11-02-2000</BirthDate>
             <Estado>Berlin</Estado>
-        </PersonalInformation>
-        <OriginUniversity xsi:type="ale:OriginUniversityAle">
+        </eras:PersonalInformation>
+      <OriginUniversity xsi:type="ale:OriginUniversityAle">
             <Degree>Bachelor of Science in Computer Science</Degree>
             <Institution>University of Example</Institution>
             <CreditsAchieved>120</CreditsAchieved>
