@@ -1,0 +1,68 @@
+<eras:Compendium xmlns:eras="http://www.erasmusG4-6.org"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ale="http://www.erasmusG4-6/alemania.org"
+    xsi:schemaLocation="http://www.erasmusG4-6.org erasmus.xsd http://www.erasmusG4-6/alemania.org alemania.xsd">
+    <Alumno>
+        <PersonalInformation xsi:type="ale:DatosPersonalesAle">
+            <Name>Erika Mustermann</Name>
+            <Gender>F</Gender>
+            <Email>Erika.Mustermann@example.com</Email>
+            <Nationality>Deuschland</Nationality>
+            <DIA>A123456789</DIA>
+            <BirthDate>11-02-2000</BirthDate>
+            <Estado>Berlin</Estado>
+        </PersonalInformation>
+        <OriginUniversity xsi:type="ale:OriginUniversityAle">
+            <Degree>Bachelor of Science in Computer Science</Degree>
+            <Institution>University of Example</Institution>
+            <CreditsAchieved>120</CreditsAchieved>
+            <GradeType>Higher Technical Certificate</GradeType>
+            <Extra>Online</Extra>
+        </OriginUniversity>
+        <ErasmusDestination xsi:type="ale:EducationTypeDestinationAle">
+            
+            <Degree>Computer Engineering</Degree>
+            <Institution>University of Another Example</Institution>
+            <StartDate>2025-01-01</StartDate>
+            <EndDate>2025-05-31</EndDate>
+            <numberOfSubjects>5</numberOfSubjects>
+            <Subject>
+                <Name>Data Structures</Name>
+                <Credits>6</Credits>
+                <Description>An introductory course to data structures.</Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Database Design</Name>
+                <Credits>6</Credits>
+                <Description>Deeper insight into database structures and management.</Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Web systems</Name>
+                <Credits>6</Credits>
+                <Description>An introduction to web pages, showing both front-end and back-end.</Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Computer architecture</Name>
+                <Credits>6</Credits>
+                <Description>An introduction into the hardware of computers.</Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+            <Subject>
+                <Name>Electronics applied to data processing</Name>
+                <Credits>3</Credits>
+                <Description>An advanced course into computer hardware focused on gathering data by sensors.</Description>
+                <Specialization>Computer Science</Specialization>
+            </Subject>
+        </ErasmusDestination>
+        <!-- Nuevo elemento ExperienceType -->
+        <Experience>
+            <Position>Becaria</Position>
+            <Employer>CEO of MCDonalds</Employer>
+            <StartDate>2024-09-01</StartDate>
+            <EndDate>2024-12-30</EndDate>
+        </Experience>
+    </Alumno>
+</eras:Compendium>

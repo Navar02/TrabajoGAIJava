@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:eras="http://www.erasmusG4-6.org"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+    xmlns:ale="http://www.erasmusG4-6/alemania.org"
+    targetNamespace="http://www.erasmusG4-6/alemania.org"
+    attributeFormDefault="qualified" vc:minVersion="1.1"> 
+
+    <xs:import namespace="http://www.erasmusG4-6.org" schemaLocation="erasmus.xsd"/>
+    
+    <xs:complexType name="DatosPersonalesAle">
+        <xs:complexContent>
+            <xs:extension base="eras:PersonalInformationType">
+                <xs:sequence>
+                    <xs:element name="DIA"  minOccurs="1" maxOccurs="1">
+                        <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[A-Z][0-9]{9}"/>
+                        </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="BirthDate" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="Estado" type="ale:stateT" minOccurs="1" maxOccurs="1"></xs:element>
+                </xs:sequence>
+                <xs:assert test="matches(BirthDate,'^(0[1-9]|[1-2][0-9]|3[0-1])-(0[1-9]|1[0-2])-(19[0-9][0-9]|20[0-1][0-9]|202[0-4])')"/>
+                
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="EducationTypeDestinationAle">
+        <xs:complexContent>
+            <xs:extension base="eras:EducationTypeDestination">
+                <xs:assert test="count(Subject)= numberOfSubjects"/>
+                <xs:assert test="every $c in .//Credits satisfies $c = 3 or $c = 6 or $c = 12"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    
+    
+    <xs:complexType name="OriginUniversityAle">
+        <xs:complexContent>
+            <xs:extension base="eras:EducationTypeOrigin">
+                <xs:sequence>
+                    <xs:element name="GradeType" minOccurs="1" maxOccurs="1">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="Degree"/>
+                                <xs:enumeration value="Higher Technical Certificate"/>
+                            </xs:restriction> 
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Extra" minOccurs="0" maxOccurs="1">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="Master"/>
+                                <xs:enumeration value="Online"/>
+                            </xs:restriction> 
+                        </xs:simpleType>                     
+                    </xs:element>                   
+                </xs:sequence>
+                <xs:assert test="if (Extra='Master') then (GradeType = 'Degree' ) else true() "/>
+                <xs:assert test="if (Extra='Online') then (GradeType = 'Higher Technical Certificate' ) else true() "/>
+            </xs:extension>            
+        </xs:complexContent>        
+    </xs:complexType>
+    
+    
+    
+    
+    
+    <xs:simpleType name="DIAType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][0-9]{9}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="stateT">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Baden-Württemberg" />
+            <xs:enumeration value="Bavaria" />
+            <xs:enumeration value="Berlin" />
+            <xs:enumeration value="Brandenburg" />
+            <xs:enumeration value="Bremen" />
+            <xs:enumeration value="Hamburg" />
+            <xs:enumeration value="Hesse" />
+            <xs:enumeration value="Lower Saxony" />
+            <xs:enumeration value="Mecklenburg-Vorpommern" />
+            <xs:enumeration value="North Rhine-Westphalia" />
+            <xs:enumeration value="Rhineland-Palatinate" />
+            <xs:enumeration value="Saarland" />
+            <xs:enumeration value="Saxony)" />
+            <xs:enumeration value="Saxony-Anhalt" />
+            <xs:enumeration value="Schleswig-Holstein" />
+            <xs:enumeration value="Thuringia" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
