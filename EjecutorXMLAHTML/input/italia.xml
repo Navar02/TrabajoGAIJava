@@ -18,7 +18,7 @@
             <Institution>University of Example</Institution>
             <CreditsAchieved>120</CreditsAchieved>
         </OriginUniversity>
-        <eras:ErasmusDestination>
+        <ita:ITA_EducationTypeDestination>
             
             <Degree>Computer Engineering</Degree>
             <Institution>University of Another Example</Institution>
@@ -55,7 +55,9 @@
                 <Description>An introductory course to data structures.</Description>
                 <Specialization>Computer Science</Specialization>
             </Subject>
-        </eras:ErasmusDestination>
+            
+            <ita:Region>Abruzzo</ita:Region>
+        </ita:ITA_EducationTypeDestination>
         <!-- Nuevo elemento ExperienceType -->
         <Experience>
             <Position></Position>
@@ -83,7 +85,7 @@
             <CreditsAchieved>100</CreditsAchieved>
         </OriginUniversity>
         
-        <eras:ErasmusDestination>
+        <ita:ITA_EducationTypeDestination>
             <Degree>History</Degree>
             <Institution>University of Yet Another Example</Institution>
             <StartDate>2024-09-01</StartDate>
@@ -96,7 +98,7 @@
                 <Specialization>History</Specialization>
             </Subject>
             <!-- More subjects can be added here -->
-        </eras:ErasmusDestination>
+        </ita:ITA_EducationTypeDestination>
         
         <Experience>
             <Position>Research Assistant</Position>

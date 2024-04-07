@@ -22,8 +22,6 @@
             <xs:element ref="eras:ErasmusDestination" minOccurs="1" maxOccurs="1"/>
             <xs:element name="Experience" type="eras:ExperienceType" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
-        <!-- aserción para comprobar que origen no sea igual al destino -->
-        <xs:assert test="OriginUniversity/Institution != eras:ErasmusDestination/Institution"/>
     </xs:complexType>
     
     <xs:simpleType name="GenderType">

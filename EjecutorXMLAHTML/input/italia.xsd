@@ -51,12 +51,10 @@
     <xs:complexType name="ITA_EducationTypeDestinationT">
         <xs:complexContent>
             <xs:extension base="era:EducationTypeDestination">
-                <xs:choice>
-                    <xs:element ref="ita:Regions" minOccurs="1" maxOccurs="1"/>
-                </xs:choice>
-                
-                <xs:assert test="data(./numberOfSubjects) &lt; 8"/>
-                <xs:assert test="sum(.//Credits) &lt; 43"/>
+                <xs:sequence>
+                    <xs:element ref="ita:Region" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+                <xs:assert test="sum(.//Credits) &lt; 60"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -77,7 +75,7 @@
         </xs:simpleType>
     </xs:element>
     
-    <xs:element name="Regions" type="ita:ITA_RegionsT"/>
+    <xs:element name="Region" type="ita:ITA_RegionsT"/>
     
     <xs:simpleType name="ITA_RegionsT">
         <xs:restriction base="xs:string">
