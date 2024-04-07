@@ -3,12 +3,13 @@
     xmlns:ita="http://www.italiaeras.org"
     xsi:schemaLocation="http://www.erasmusG4-6.org erasmus.xsd 
                         http://www.italiaeras.org italia.xsd">
-    <Alumno>
+    <Alumno> 
         <ita:ExtPersonalInformation>
             <Name>John Doe</Name>
             <Gender>M</Gender>
             <Email>john.doe@example.com</Email>
-            <Nationality>US</Nationality>
+            <Nationality>Spain</Nationality>
+            <Allergies>Dermic</Allergies>
         </ita:ExtPersonalInformation>
         <OriginUniversity>
             <Degree>Bachelor of Science in Computer Science</Degree>

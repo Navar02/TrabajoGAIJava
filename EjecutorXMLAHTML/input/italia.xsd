@@ -23,32 +23,38 @@
     <xs:complexType name="ExtendedPersonalInformationT">
         <xs:complexContent>
             <xs:extension base="era:PersonalInformationType">
+                <xs:sequence>
+                    <xs:element name="Allergies">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="Dermic"/>
+                                <xs:enumeration value="Alimentary"/>
+                                <xs:enumeration value="Respiratory"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>
                 <!-- 1. Gender -->
                 <xs:assert test="Gender = 'F' or Gender = 'M' or Gender = 'NB' or Gender = 'Other'"/>
                 <!-- 2.  Email -->    
                 <xs:assert test="every $mail in .//Email satisfies ( matches($mail, '([0-9]|[A-z])+@([0-9]|[A-z])+.([0-9]|[A-z]){3}' ) )"/>
+                <xs:assert test="Nationality = 'Spain' or
+                    Nationality = 'France' or
+                    Nationality = 'Germany' or
+                    Nationality = 'United Kingdom' or
+                    Nationality = 'Ireland' or
+                    Nationality = 'Greece' or
+                    Nationality = 'Ukraine' or
+                    Nationality = 'Sweden' or
+                    Nationality = 'Netherlands' or
+                    Nationality = 'Poland' or
+                    Nationality = 'Italy' or
+                    Nationality = 'Other'"
+                />
             </xs:extension>
+            
         </xs:complexContent>
     </xs:complexType>
-        
-    <xs:element name="Nationality" type="ita:RestrictedNationalityT"/>
-   
-    <xs:simpleType name="RestrictedNationalityT">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="Spain"/>
-            <xs:enumeration value="France"/>
-            <xs:enumeration value="Germany"/>
-            <xs:enumeration value="United Kingdom"/>
-            <xs:enumeration value="Ireland"/>
-            <xs:enumeration value="Greek"/>
-            <xs:enumeration value="Ucrain"/>
-            <xs:enumeration value="Sweeden"/>
-            <xs:enumeration value="Holand"/>
-            <xs:enumeration value="Poland"/>
-            <xs:enumeration value="Italy"/>
-            <xs:enumeration value="Other"/>
-        </xs:restriction>
-    </xs:simpleType>
 
     <xs:element name="ExtPersonalInformation" type="ita:ExtendedPersonalInformationT" substitutionGroup="era:PersonalInformation"/>
     
